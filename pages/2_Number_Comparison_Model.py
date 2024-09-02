@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 
 import streamlit as st
-from misc.numpyro_model import model_main
-from misc.prepare_data import get_data
-import numpyro
 import numpy as np
 from streamlit_pdf_viewer import pdf_viewer
 
