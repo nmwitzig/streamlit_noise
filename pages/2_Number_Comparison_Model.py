@@ -10,15 +10,15 @@ st.markdown("# Number Comparison Model")
 # Get Latex Equation for Model E=mc^2
 
 
-st.markdown("For number comparison, we model the probability to choose $A$ as the outcome from the following equation:")
+st.markdown("For number comparison, we model the probability to choose $\text{A}$ as the outcome from the following equation:")
          
 st.latex(r'''
 \begin{equation}
-{Pr}[(A) \succ B \times \frac{1}{2}]=\Phi\left(\frac{\alpha' \times \ln \left(\frac{A}{B}\right)- \times \ln \left(\frac{1}{2}\right) -\ln (\delta')}{\nu \alpha}\right)
+{Pr}([\text{A} \succ \text{B}]) \times \frac{1}{2}]=\Phi\left(\frac{\alpha' \times \ln \left(\frac{\text{A}}{\text{B}}\right)- \times \ln \left(\frac{1}{2}\right) -\ln (\delta')}{\nu_{\frac{\text{A}}{\text{B}}} \alpha}\right)
 \end{equation}
     ''')
 
-st.markdown(r"where $\alpha' = \frac{\sigma_r^2}{\sigma_r^2+\nu^2}$ and $\hat{b} = \frac{\widehat{\beta}}{1-\widehat{\beta}}$ and $\hat{r} = \frac{\widehat{self}}{\widehat{other}}$.")
+st.markdown(r"where $\alpha' = \frac{1}{1+\nu_{\frac{\text{A}}{\text{B}}}^2}$ and $\delta' = \frac{1}{\mu^{\hat{r'}^{1-\alpha'}}}$")
 
 # get list of files in plots/individual_predictions_lkj/main
 import os

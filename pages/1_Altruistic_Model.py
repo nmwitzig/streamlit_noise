@@ -10,15 +10,15 @@ st.markdown("# Main Model")
 # Get Latex Equation for Model E=mc^2
 
 
-st.markdown("We model the probability to choose $self$ as the outcome from the following equation:")
+st.markdown("We model the probability to choose $\text{self}$ as the outcome from the following equation:")
          
 st.latex(r'''
 \begin{equation}
-{Pr}[(self; \beta) \succ other]=\Phi\left(\frac{\alpha \times \ln \left(\frac{self}{other}\right)- \gamma \times \ln \left(\frac{\beta}{1-\beta}\right) -\ln (\delta)}{\nu \sqrt{\gamma^2+\alpha^2}}\right)
+{Pr}[\text{self} \succ \text{other}]=\Phi\left(\frac{\alpha \times \ln \left(\frac{\text{self}}{\text{other}}\right)- \ln \left(\frac{\beta}{1-\beta}\right) -\ln (\delta)}{\sqrt{\nu_{\frac{\text{self}}{\text{other}}}^2\alpha^2 + \nu_{\frac{\beta}{1-\beta}}^2}}\right)
 \end{equation}
     ''')
 
-st.markdown(r"where $\gamma = \frac{\sigma_{\beta}^2}{\sigma_{\beta}^2+\nu^2}$, $\alpha = \frac{\sigma_r^2}{\sigma_r^2+\nu^2}$ and $\hat{b} = \frac{\widehat{\beta}}{1-\widehat{\beta}}$ and $\hat{r} = \frac{\widehat{self}}{\widehat{other}}$.")
+st.markdown(r"where $\alpha = \frac{1}{1+\nu_{\frac{\text{self}}{\text{other}}}^2}$ and $\delta = \frac{1}{\mu^{\hat{r}^{1-\alpha}}}$")
 
 # get list of files in plots/individual_predictions_lkj/main
 import os
