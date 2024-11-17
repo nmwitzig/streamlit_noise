@@ -10,11 +10,11 @@ st.markdown("# Main Model")
 # Get Latex Equation for Model E=mc^2
 
 
-st.markdown("We model the probability to choose $\text{self}$ as the outcome from the following equation:")
+st.markdown("We model the probability to choose $\\text{self}$ as the outcome from the following equation:")
          
 st.latex(r'''
 \begin{equation}
-{Pr}[\text{self} \succ \text{other}]=\Phi\left(\frac{\alpha \times \ln \left(\frac{\text{self}}{\text{other}}\right)- \ln \left(\frac{\beta}{1-\beta}\right) -\ln (\delta)}{\sqrt{\nu_{\frac{\text{self}}{\text{other}}}^2\alpha^2 + \nu_{\frac{\beta}{1-\beta}}^2}}\right)
+{Pr}([\text{self} \succ \text{other}])=\Phi\left(\frac{\alpha \times \ln \left(\frac{\text{self}}{\text{other}}\right)- \ln \left(\frac{\beta}{1-\beta}\right) -\ln (\delta)}{\sqrt{\nu_{\frac{\text{self}}{\text{other}}}^2\alpha^2 + \nu_{\frac{\beta}{1-\beta}}^2}}\right)
 \end{equation}
     ''')
 

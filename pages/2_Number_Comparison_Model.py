@@ -10,11 +10,11 @@ st.markdown("# Number Comparison Model")
 # Get Latex Equation for Model E=mc^2
 
 
-st.markdown("For number comparison, we model the probability to choose $\text{A}$ as the outcome from the following equation:")
+st.markdown("For number comparison, we model the probability to choose $\\text{A}$ as the outcome from the following equation:")
          
 st.latex(r'''
 \begin{equation}
-{Pr}([\text{A} \succ \text{B}]) \times \frac{1}{2}]=\Phi\left(\frac{\alpha' \times \ln \left(\frac{\text{A}}{\text{B}}\right)- \times \ln \left(\frac{1}{2}\right) -\ln (\delta')}{\nu_{\frac{\text{A}}{\text{B}}} \alpha}\right)
+{Pr}([\text{A} \succ \text{B} \times \frac{1}{2}])=\Phi\left(\frac{\alpha' \times \ln \left(\frac{\text{A}}{\text{B}}\right)- \times \ln \left(\frac{1}{2}\right) -\ln (\delta')}{\nu_{\frac{\text{A}}{\text{B}}} \alpha}\right)
 \end{equation}
     ''')
 
