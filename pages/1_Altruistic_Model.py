@@ -30,8 +30,22 @@ subject_id = sorted(subject_id)
 # drop down menu for subject_ids
 subject_id = st.selectbox("Select Subject ID",subject_id)
 
-# print pdf of the subject, located in plots/individual_predictions_lkj/main
 st.markdown("## Individual Predictions")
+st.markdown("""
+<div style="display: flex; align-items: center;">
+    <div style="display: flex; align-items: center; margin-right: 20px;">
+        <div style="width: 20px; height: 10px; background-color: rgb(211,94,26); margin-right: 5px;"></div>
+        <span>Treatment</span>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <div style="width: 20px; height: 10px; background-color: rgb(16,114,174); margin-right: 5px;"></div>
+        <span>Baseline</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# print pdf of the subject, located in plots/individual_predictions_lkj/main
+
 #st.image(f"plots/individual_predictions_lkj/main/{subject_id}.pdf")
 pdf_viewer(f"plots/individual_predictions_lkj/main/{subject_id}.pdf")
 

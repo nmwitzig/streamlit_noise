@@ -14,11 +14,11 @@ st.markdown("For number comparison, we model the probability to choose $\\text{A
          
 st.latex(r'''
 \begin{equation}
-{Pr}([\text{A} \succ \text{B} \times \frac{1}{2}])=\Phi\left(\frac{\alpha' \times \ln \left(\frac{\text{A}}{\text{B}}\right)- \times \ln \left(\frac{1}{2}\right) -\ln (\delta')}{\nu_{\frac{\text{A}}{\text{B}}} \alpha}\right)
+{Pr}([\text{A} \succ \text{B} \times \frac{1}{2}])=\Phi\left(\frac{\alpha' \times \ln \left(\frac{\text{A}}{\text{B}}\right)- \times \ln \left(\frac{1}{2}\right) -\ln (\delta')}{\nu_{\frac{\text{A}}{\text{B}}} \alpha'}\right)
 \end{equation}
     ''')
 
-st.markdown(r"where $\alpha' = \frac{1}{1+\nu_{\frac{\text{A}}{\text{B}}}^2}$ and $\delta' = \frac{1}{\mu^{\hat{r'}^{1-\alpha'}}}$")
+st.markdown(r"where $\alpha' = \frac{1}{1+\nu_{\frac{\text{A}}{\text{B}}}^2}$ and $\delta' = \frac{1}{\mu_{\hat{r'}^{1-\alpha'}}}$")
 
 # get list of files in plots/individual_predictions_lkj/main
 import os
@@ -30,8 +30,23 @@ subject_id = sorted(subject_id)
 # drop down menu for subject_ids
 subject_id = st.selectbox("Select Subject ID",subject_id)
 
-# print pdf of the subject, located in plots/individual_predictions_lkj/main
 st.markdown("## Individual Predictions")
+st.markdown("""
+<div style="display: flex; align-items: center;">
+    <div style="display: flex; align-items: center; margin-right: 20px;">
+        <div style="width: 20px; height: 10px; background-color: rgb(211,94,26); margin-right: 5px;"></div>
+        <span>Treatment</span>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <div style="width: 20px; height: 10px; background-color: rgb(16,114,174); margin-right: 5px;"></div>
+        <span>Baseline</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+
+
+
 #st.image(f"plots/individual_predictions_lkj/main/{subject_id}.pdf")
 pdf_viewer(f"plots/individual_predictions_lkj/number/{subject_id}.pdf")
 
